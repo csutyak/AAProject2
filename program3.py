@@ -100,4 +100,8 @@ def program3(filename, kValue):
                 numberSingle = number.astype(numpy.single)
                 numberByte = numberSingle.tobytes(order = 'C')
                 file.write(numberByte)
+
+    outputFilename.close()
+
+    print("Success")
         

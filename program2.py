@@ -49,3 +49,7 @@ def program2(filename):
             for number in row:
                 file.write(str(number) + " ")
             file.write("\n")
+
+    outputFilename.close()
+
+    print("Success")

@@ -16,3 +16,6 @@ if sys.argv[1] == "3":
 
 if sys.argv[1] == "4":
     program4(sys.argv[2])
+
+if len(sys.argv) < 2:
+    print("ERROR: need to give an argument")
