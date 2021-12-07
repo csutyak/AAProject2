@@ -35,7 +35,6 @@ def program4(filename):
         for widthIndex in range(width):
             workingNum = numpy.frombuffer(f.read(4), dtype=dataType, count=1)
             VT[kIndex][widthIndex] = workingNum
-    V = VT.transpose()
 
     imageMatrix = U.dot(S).dot(VT)
 
@@ -44,8 +43,9 @@ def program4(filename):
     #pyplot.show()
 
     #write the ints to the new file
-    index = filename.find("_b.pgm.SVD")
+    index = filename.find("_")
     outputFilename = filename[:index] + "_k.pgm"
+    print("writing to:", outputFilename)
 
     with open(outputFilename, 'wt') as file:
         file.write("P2\n")
@@ -61,7 +61,6 @@ def program4(filename):
                 file.write(str(number) + " ")
             file.write("\n")
 
-    outputFilename.close()
+    file.close()
 
     print("Success")
-    

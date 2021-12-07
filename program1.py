@@ -64,6 +64,6 @@ def program1(filename):
             for number in row:
                 file.write((int(number)).to_bytes(1, byteorder='little', signed=False))
 
-    outputFilename.close()
+    file.close()
 
     print("Success")

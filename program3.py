@@ -101,7 +101,7 @@ def program3(filename, kValue):
                 numberByte = numberSingle.tobytes(order = 'C')
                 file.write(numberByte)
 
-    outputFilename.close()
+    file.close()
 
     print("Success")
         

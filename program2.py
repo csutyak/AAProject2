@@ -50,6 +50,6 @@ def program2(filename):
                 file.write(str(number) + " ")
             file.write("\n")
 
-    outputFilename.close()
+    file.close()
 
     print("Success")
